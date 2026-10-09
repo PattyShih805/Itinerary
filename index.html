@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="wrap">
-<header class="hero"><h1>北海道 2026・旅伴互動行程地圖</h1><p>10/14（三）～10/19（一）｜函館・札幌・美瑛・小樽</p></header>
+<header class="hero"><h1>北海道 2026・旅伴互動行程地圖</h1><p>10/14（三）～10/19（一）｜函館・大沼・札幌・美瑛・小樽</p></header>
 <div class="tabs" id="tabs"></div>
 <div class="grid">
 <section class="card">
@@ -37,22 +37,26 @@
 </div></div>
 <script>
 const days=[
-{date:"10/14（三）",name:"函館市區半日遊",sub:"五稜郭 → 元町・港區 → 大門",p:[
-["11:30","函館機場","抵達、領行李；搭機場公車往五稜郭","airport",240,395],
-["12:30","HOTEL MYSTAYS 函館五稜郭","Check-in／寄放行李","hotel",275,355],
-["13:00","小丑漢堡 五稜郭公園前店","午餐","food",295,330],
-["14:30","八幡坂","搭市電往十字街／末廣町；經典函館港視角","view",145,245],
-["15:15","金森紅磚倉庫 & 函館港","文創小店、Snaffle’s 起司蛋糕","sight",175,300],
-["18:00","成吉思汗烤羊肉","羊羊亭／大門橫丁周邊","food",250,365],
-["20:00","返回飯店","結束第一天","hotel",275,355]]},
-{date:"10/15（四）",name:"函館歷史文化與函館山百萬夜景",sub:"函館朝市 → 五稜郭 → 元町 → 函館山",p:[
-["08:00","函館朝市","釣烏賊、海鮮丼／帝王蟹","food",230,315],
-["10:00","五稜郭公園","秋季散步","park",295,330],
-["11:00","五稜郭塔","登高俯瞰星形城郭","view",300,315],
-["12:30","村上海膽","午餐／無添加海膽","food",225,315],
-["14:30","舊函館區公會堂 & 元町教堂群","歐式洋樓與歷史街區","sight",145,235],
-["17:00","函館山展望台","纜車上山；夕陽 → 百萬夜景","view",105,205],
-["20:00","在地居酒屋","體驗活烏賊刺身","food",225,315]]},
+{date:"10/14（三）",name:"歷史街區與百萬夜景",sub:"函館機場 → 五稜郭 → 元町・金森倉庫 → 函館山夜景",p:[
+["11:30","函館機場","抵達函館機場、提領行李出關","airport",240,395],
+["12:30","HOTEL MYSTAYS 函館五稜郭","搭帝產巴士直達飯店門口放行李，後搭市電前往JR函館站","hotel",275,355],
+["13:30","JR 函館車站","綠色窗口/遊客中心購買「函館特級路面電車・巴士兩日券」及車票","transit",230,315],
+["14:00","市電搭乘","搭乘市電前往「十字街站」","transit",180,280],
+["14:30","幸運小丑漢堡 十字街銀座店","遲來的午餐","food",150,265],
+["15:00","金森紅磚倉庫 & 八幡坂","慢步金森倉庫與八幡坂（元町教堂群看時間）","sight",145,245],
+["16:30","函館山纜車 山麓站","購票搭乘纜車上山（日落時間約16:55）","transit",115,225],
+["17:00","函館山展望台","絕美魔幻藍調與百萬夜景","view",105,205],
+["19:00","纜車下山","返回市區結束首日行程","transit",140,250]]},
+{date:"10/15（四）",name:"楓紅國定公園與星形城郭",sub:"函館朝市 → 大沼公園賞楓 → 村上海膽 → 五稜郭公園 → 羊肉大餐",p:[
+["06:30","函館朝市","體驗釣烏賊、享用豐盛海鮮丼飯","food",230,315],
+["08:23","JR 函館本線","搭乘電車前往大沼公園（08:23-09:10）","transit",210,250],
+["09:10","大沼國定公園","漫步「島巡之路」賞楓；車站旁「沼之家」買手工大沼糰子","nature",190,150],
+["11:30","大沼公園站","返回月台準備搭車","transit",190,150],
+["12:20","JR 函館本線","搭乘電車返回函館站（12:20-13:05）","transit",210,250],
+["13:05","村上海膽 (Uni Murakami)","午餐：無添加海膽丼（預約13:30/14:00）","food",225,315],
+["14:30","市電移動","搭乘市電返回「五稜郭公園前站」","transit",250,335],
+["15:00","五稜郭塔 & 五稜郭公園","登塔俯瞰楓紅星形城郭，護城河畔散步","view",295,330],
+["17:30","成吉思汗羊肉","晚餐：享用羊肉大餐","food",275,355]]},
 {date:"10/16（五）",name:"函館 → 札幌・市區景點",sub:"函館機場 → 丘珠機場 → 札幌 → 藻岩山",p:[
 ["06:40","函館機場","前往機場","airport",240,395],
 ["07:50","JAL 國內線","函館 → 札幌丘珠機場","flight",345,255],
@@ -65,6 +69,7 @@ const days=[
 {date:"10/17（六）",name:"札幌地標・美瑛青池一日遊",sub:"札幌市中心 → 美瑛／富良野 → 狸小路",p:[
 ["08:45","札幌市時計台","外觀拍照","sight",430,215],
 ["09:00","札幌電視塔","展望台俯瞰大通公園","view",435,240],
+["10:00","Donguri Odori","奶油玉米麵包、明太子馬涼薯鹽可頌","food",430,245],
 ["10:30","大通公園集合點","步行前往旅行社集合點","transit",420,250],
 ["11:00","美瑛・白金青池","旅行社一日遊核心景點","nature",530,135],
 ["—","白鬚瀑布／富良野","依旅行社當日路線停留","nature",500,170],
@@ -97,12 +102,10 @@ function render(){
  const used=[...new Set(d.p.map(p=>p[3]))];$("legend").innerHTML=used.map(x=>`<span class="pill">${type[x]||x}</span>`).join("");
  selectStop(Math.min(sel,d.p.length-1),false);
 }
-function selectStop(i,scroll=true){sel=i;const p=days[day].p[i];$("detail").innerHTML=`<strong>${p[0]}　${p[1]}</strong><br>${p[2]}<br><span style="color:#89938f">分類：${type[p[3]]||p[3]}</span>`;document.querySelectorAll(".stop").forEach((x,j)=>x.classList.toggle("active",j===i));if(scroll)document.querySelectorAll(".stop")[i]?.scrollIntoView({behavior:"smooth",block:"nearest"});renderMarkersOnly()}
+function selectStop(i,scroll=true){sel=i;const p=days[day].p[i];$("detail").innerHTML=`<strong>${p[0]} ${p[1]}</strong><br>${p[2]}<br><span style="color:#89938f">分類：${type[p[3]]||p[3]}</span>`;document.querySelectorAll(".stop").forEach((x,j)=>x.classList.toggle("active",j===i));if(scroll)document.querySelectorAll(".stop")[i]?.scrollIntoView({behavior:"smooth",block:"nearest"});renderMarkersOnly()}
 function renderMarkersOnly(){document.querySelectorAll(".marker circle").forEach((c,i)=>c.setAttribute("r",i===sel?10:8))}
 function setDay(i){day=i;sel=0;render()}
 render();
 </script>
 </body>
 </html>
-北海道_2026_旅伴互動行程地圖.html
-HTML
