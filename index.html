@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>北海道 2026｜旅伴互動行程地圖</title>
+<title>北海道 2026｜互動行程地圖</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f7f6;color:#263238;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif}
 .wrap{max-width:1100px;margin:auto;padding:24px 16px 40px}.hero{padding:8px 4px 20px}.hero h1{margin:0;font-size:28px}.hero p{color:#6b7280;margin:7px 0 0}
@@ -76,13 +76,11 @@ const days=[
 ["21:30","大通公園解散","返回札幌市中心","transit",420,250],
 ["21:45","狸小路商店街","夜逛、宵夜、夜パフェ","shop",405,285],
 ["22:30","MEGA 唐吉訶德 狸小路本店","藥妝與伴手禮","shop",395,300],
-["—","元祖拉麵橫丁／狸小路周邊","札幌味噌拉麵","food",405,300]]},
-{date:"10/18（日）",name:"小樽浪漫一日遊",sub:"札幌 → 小樽運河 → 堺町通 → 天狗山 → 札幌",p:[
-["09:30","JR 札幌站","快速 Airport 往小樽；可留意右側海景；南小樽下車","transit",420,220],
-["10:30","小樽運河","漫步拍照","sight",325,105],
-["11:15","籔半蕎麥麵","午餐","food",315,125],
-["12:30","堺町通商店街","北一硝子、音樂盒堂、LeTAO、六花亭、北菓樓","shop",300,155],
-["17:30","回札幌市區","彈性調整行程free style~~","transit",245,70],
+["—","狸小路周邊","food",405,300]]},
+{date:"10/18（日）",name:"豐平峽．小樽．白色戀人公園一日遊",sub:"札幌 → 豐平峽 → 小樽 → 白色戀人公園 → 札幌",p:[
+["07:40","JR 札幌站","抵達櫃台準備搭車; 可留意右側風景","transit",420,220],
+["-","豐平峽/札幌國際滑雪場/小樽/白色戀人公園","依旅行社當日路線停留","nature",325,105],
+["18:00","回到札幌市區","彈性調整行程free style~~","transit",245,70],
 ["20:30","禪 壽喜燒","返回札幌後晚餐","food",415,220]]},
 {date:"10/19（一）",name:"返程",sub:"札幌 → 新千歲機場 → 台灣",p:[
 ["08:00","JR 札幌站","快速 Airport 直達新千歲機場","transit",420,220],
@@ -90,7 +88,18 @@ const days=[
 ["12:05","飛往台灣","返程航班起飛","flight",470,335]]}
 ];
 const type={airport:"機場",hotel:"住宿",food:"美食",view:"景觀",sight:"景點",park:"公園",shop:"購物",nature:"自然",transit:"交通",flight:"航班"};
-const color={food:"#c49a6c",view:"#7d91b8",nature:"#8aa6a0",shop:"#b58ca8"};
+const color={
+  food:"#c49a6c",
+  view:"#7d91b8",
+  nature:"#8aa6a0",
+  shop:"#b58ca8",
+  airport:"#d97706",
+  hotel:"#6366f1",
+  transit:"#4b5563",
+  sight:"#e11d48",
+  park:"#10b981",
+  flight:"#0284c7"
+};
 let day=0,sel=0;
 const $=id=>document.getElementById(id);
 function render(){
